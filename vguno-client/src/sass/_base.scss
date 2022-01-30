@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&family=Montserrat:ital,wght@0,300;0,600;0,700;0,800;1,300;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Monteserrat' , sans-serif;
+}
+
+html {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@each $num in $numberGrid {
+    .grid-col-#{$num} {
+        grid-template-columns: repeat($num, 1fr);
+    }
+}
+
+@each $num in $numberGrid {
+    @include tablet {
+        .grid-md-col-#{$num} {
+            grid-template-columns: repeat($num,1fr);
+        }
+    }
+}
+
+@each $num in $numberGrid {
+    @include mobile {
+        .grid-sm-col-#{$num} {
+            grid-template-columns: repeat($num, 1fr);
+        }
+    }
+}
+
+.container {
+    padding: 0 50px;
+    margin: auto;
+
+    @include tablet {
+        padding: 0 20px;
+    }
+
+    @include mobile {
+        padding : 0 10px;
+    }
+
+}
+
+.main {
+    margin-top : $header-height;
+    margin-bottom: 2rem;
+    min-height: 100vh;
+
+    @include tablet {
+        margin-top: calc(#{$header-tablet-height} + 20px);
+    }
+
+    @include mobile {
+        margin-top: calc(#{$header-mobile-height} + 10px);
+    }
+}

@@ -1,0 +1,84 @@
+.header {
+  position: relative;
+  height: $header-height;
+  &__toggle {
+    display: none;
+  }
+  &-top {
+    @include flex(center, flex-start);
+    height: 80px;
+    &__logo {
+      @include flex(center, flex-end);
+      width: 20%;
+      cursor: pointer;
+      img {
+        height: 58px;
+      }
+    }
+    &__search {
+        width: 50%;
+        @include flex(center,flex-end);
+        &__input {
+            width: 500px;
+            height: 40px;
+            position: relative;
+            input {
+                width: 100%;
+                height: 100%;
+                font-size: 16px;
+                padding: 0 15px;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                background-color: $second-bg-color;
+            }
+
+            i {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__cart {
+        flex: 1;
+        @include flex(center,center);
+        &__list {
+            @include flex (center,center);
+            font-size: 2rem;
+            li~li {
+                margin-left: 20px
+            }
+            li {
+                cursor: pointer;
+            }
+            
+        }
+    }
+  }
+
+  &-bottom {
+    @include flex(center, center);
+    height: 40px;
+    background-color: $second-bg-color;
+    margin: 0 -50px;
+
+    &__list {
+        @include flex(center,center);
+
+        &__item ~ &__item{
+            margin-left: 50px;
+        }
+        &__item {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+        }
+    }
+  }
+}
