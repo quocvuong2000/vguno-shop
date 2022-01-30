@@ -1,9 +1,29 @@
 .header {
   position: relative;
   height: $header-height;
+
   &__toggle {
     display: none;
+    width: 100%;
+    @include tablet {
+      @include flex(center, space-between);
+    }
+    i {
+      font-size: 2.5rem;
+    }
+    &__logo {
+      @include flex(center, flex-end);
+      width: 20%;
+      cursor: pointer;
+      @include tablet {
+        @include flex(flex-start, flex-start);
+      }
+      img {
+        height: 58px;
+      }
+    }
   }
+
   &-top {
     @include flex(center, flex-start);
     height: 80px;
@@ -11,53 +31,55 @@
       @include flex(center, flex-end);
       width: 20%;
       cursor: pointer;
+
       img {
         height: 58px;
       }
     }
     &__search {
-        width: 50%;
-        @include flex(center,flex-end);
-        &__input {
-            width: 500px;
-            height: 40px;
-            position: relative;
-            input {
-                width: 100%;
-                height: 100%;
-                font-size: 16px;
-                padding: 0 15px;
-                border-radius: 10px;
-                border: none;
-                outline: none;
-                background-color: $second-bg-color;
-            }
+      width: 50%;
 
-            i {
-                position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 1.8rem;
-                cursor: pointer;
-            }
+      @include flex(center, flex-end);
+      &__input {
+        width: 500px;
+        height: 40px;
+        position: relative;
+        input {
+          width: 100%;
+          height: 100%;
+          font-size: 16px;
+          padding: 0 15px;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          background-color: $second-bg-color;
         }
+
+        i {
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.8rem;
+          cursor: pointer;
+        }
+      }
     }
 
     &__cart {
-        flex: 1;
-        @include flex(center,center);
-        &__list {
-            @include flex (center,center);
-            font-size: 2rem;
-            li~li {
-                margin-left: 20px
-            }
-            li {
-                cursor: pointer;
-            }
-            
+      flex: 1;
+
+      @include flex(center, center);
+      &__list {
+        @include flex(center, center);
+        font-size: 2rem;
+        li ~ li {
+          margin-left: 20px;
         }
+        li {
+          cursor: pointer;
+        }
+      }
     }
   }
 
@@ -66,19 +88,211 @@
     height: 40px;
     background-color: $second-bg-color;
     margin: 0 -50px;
+    @include tablet {
+      margin: 0;
+    }
 
     &__list {
-        @include flex(center,center);
+      @include flex(center, center);
+      width: 70%;
+      position: relative;
+      height: 100%;
 
-        &__item ~ &__item{
-            margin-left: 50px;
+      &__item ~ &__item {
+        margin-left: 50px;
+      }
+      &__item {
+        padding: 10px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: border-bottom 0.3s ease;
+        border-bottom: solid 2px $second-bg-color;
+        &:hover {
+          border-bottom: solid 2px black;
         }
-        &__item {
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
 
+        &__main {
+          &:hover {
+            .header-bottom__dropdown {
+              opacity: 1;
+              visibility: visible;
+              top: 100%;
+            }
+          }
         }
+      }
+    }
+
+    &__dropdown {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: calc(100% + 100px);
+      left: 0;
+      width: 100%;
+      @include flex(stretch, center);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 15px;
+      transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+      &__left {
+        width: 30%;
+        border: solid 2px $second-bg-color;
+        margin-right: 5px;
+        border-radius: 20px;
+        border-top: none;
+
+        &__list {
+          width: 100%;
+          padding: 10px;
+
+          &__title {
+            text-align: center;
+            background-color: $second-bg-color;
+            padding: 10px;
+            border-radius: 10px;
+          }
+
+          &__item {
+            border: solid 1px #eee;
+            font-weight: normal;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 15px;
+            margin-top: 5px;
+            @include flex(center, flex-start);
+            i {
+              font-size: 1.8rem;
+              margin-right: 5px;
+            }
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+
+      &__right {
+        flex: 1;
+
+        &__grid {
+          display: grid;
+          grid-template-areas:
+            "h1 h1 h2"
+            "h1 h1 h3"
+            "h4 h5 h6";
+          gap: 5px;
+
+          &__item:nth-child(1) {
+            grid-area: h1;
+          }
+          &__item:nth-child(2) {
+            grid-area: h2;
+          }
+          &__item:nth-child(3) {
+            grid-area: h3;
+          }
+          &__item:nth-child(4) {
+            grid-area: h4;
+          }
+          &__item:nth-child(5) {
+            grid-area: h5;
+          }
+          &__item:nth-child(6) {
+            grid-area: h6;
+          }
+
+          &__item {
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    &__close {
+      display: none;
+    }
+  }
+  @include tablet {
+    &-content {
+      background-color: white;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 100%;
+      z-index: 99;
+      transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+
+      .header-top {
+        @include flex(center, center);
+        flex-direction: column;
+        height: unset;
+        padding: 0 20px;
+        &__logo {
+          @include flex(center, center);
+        }
+        &__search {
+          width: 100%;
+          @include flex(center, center);
+        }
+        &__cart {
+          margin: 10px 0;
+        }
+      }
+      .header-bottom {
+        background-color: #eee;
+        height: unset;
+        @include flex(center, space-between);
+
+        &__list {
+          width: 100%;
+          &__item {
+            font-size: 1rem;
+            margin: 0;
+            padding: 10px;
+          }
+        }
+
+        &__dropdown {
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+          &__left {
+            width: 100%;
+            &__list {
+              @include flex(center, center);
+              flex-wrap: wrap;
+            }
+          }
+
+          &__right {
+            display: none;
+          }
+        }
+      }
+      &__close {
+        display: block;
+        $closeVar : 18px;
+        position: absolute;
+        right: $closeVar;
+        top: $closeVar;
+
+        i {
+          font-size: 2.5rem;
+        }
+      }
+      &.active {
+        left: 0;
+      }
     }
   }
 }
