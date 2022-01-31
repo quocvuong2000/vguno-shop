@@ -1,0 +1,18 @@
+.footer {
+  padding: 30px 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__content > p {
+      margin-bottom: 10px;
+  }
+
+  &__logo {
+    height: 58px;
+  }
+}
