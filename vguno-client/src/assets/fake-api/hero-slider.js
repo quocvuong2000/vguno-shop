@@ -16,7 +16,7 @@ const heroSliderData = [
         path: "/categories",
     },
     {
-        title: "Bàn phím Asus ROG Strix Flare",
+        title: "Bàn phím ROG Strix Flare",
         description: "ROG Strix Flare - một bàn phím cơ có mọi thứ bạn muốn và hơn thế nữa. Cảm nhận sự hài lòng của mọi lần nhấn phím với switch Cherry MX nổi tiếng thế giới. Tận hưởng quyền truy cập tức thì vào các phím phương tiện chuyên dụng ở phía trên bên trái trong khi chơi game. Và trải nghiệm một mức độ cá nhân hóa vô song với huy hiệu có thể tùy chỉnh được chiếu sáng bởi ánh sáng RGB Aura Sync. Tự hào về sự tinh tế chơi game của bạn khi bạn thống trị chiến trường.",
         img: img3,
         path: "/categories",

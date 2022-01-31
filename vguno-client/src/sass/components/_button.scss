@@ -1,0 +1,47 @@
+.btn {
+  border: none;
+  outline: none;
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #000;
+  border-radius: 19px;
+  cursor: pointer;
+  box-shadow: rgba(111, 103, 100, 0.2) 0px 7px 29px 0px;
+
+  &__icon,
+  &__txt {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  &__txt {
+    padding: 1rem 2rem;
+    color: #fff;
+  }
+
+  &__icon {
+    color: #fff;
+    position: absolute;
+    @include flex(center, center);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    font-size: 2rem;
+  }
+
+  &-animate:hover &__icon {
+    transform: translateX(0);
+  }
+  &-animate:hover &__txt {
+    transform: translateX(100%);
+  }
+  &-sm {
+    &__txt {
+      padding: 0.7rem 1.4rem;
+    }
+  }
+}

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
+import Button from "./Button";
+
 const HeroSliderItem = (props) => {
   const item = props.item;
   return (
@@ -14,14 +16,16 @@ const HeroSliderItem = (props) => {
         <div className="hero-slider__item__info__description">
           <span>{item.description}</span>
         </div>
-        <div className="hero-slider__info__btn">
-          <button>
-            <Link to={"/"}>Mua ngay</Link>
-          </button>
+        <div className="hero-slider__item__info__btn">
+            <Link to={item.path}>
+              <Button icon="bxs-game" animate={true}>Mua ngay</Button>
+            </Link>
         </div>
       </div>
       <div className="hero-slider__item__image">
         <img src={item.img} alt="" />
+        <div className="shape">
+        </div>
       </div>
     </div>
   );

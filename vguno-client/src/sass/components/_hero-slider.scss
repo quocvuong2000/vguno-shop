@@ -6,7 +6,27 @@
   left: 0;
   overflow: hidden;
   margin-bottom: 50px;
-  margin-top: #{$header-height * -1};
+  margin-top: calc(#{$header-height} * -1);
+
+  @include tablet {
+    margin-top: calc(#{$header-tablet-height} *-1);
+  }
+  @include mobile {
+    margin-top: calc(#{$header-mobile-height} *-1);
+    height: 100vh;
+  }
+
+
+  &:hover &__control {
+    $varHero: 0px;
+
+    &__left {
+      left: $varHero;
+    }
+    &__right {
+      right: $varHero;
+    }
+  }
 
   &__item {
     @include flex(center, space-between);
@@ -15,7 +35,12 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
+    padding: 0 100px;
 
+    @include tablet {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
     &.active {
       opacity: 1;
       visibility: visible;
@@ -30,12 +55,15 @@
     &.active &__info {
       &__title > span,
       &__description > span,
-      &__btn > button {
+      &__btn button {
         transform: translateY(0);
       }
     }
     &__info {
-      width: 58.8%;
+    width: 58.8%;
+    @include tablet {
+      width: 100%;
+    }
       &__title,
       &__description {
         margin-bottom: 30px;
@@ -50,6 +78,10 @@
         font-size: 4rem;
         font-weight: 600;
         overflow: hidden;
+        @include mobile {
+          font-size: 2rem;
+
+        }
       }
 
       &__description {
@@ -57,6 +89,9 @@
         line-height: 2.3rem;
         color: $txt-second-color;
         overflow: hidden;
+        @include mobile {
+          font-size: 1rem;
+        }
       }
 
       &__btn {
@@ -65,10 +100,10 @@
       }
       &__title > span,
       &__description > span,
-      &__btn > button {
+      &__btn button {
         display: block;
         transform: translateY(-100%);
-        transition: transform 0.6s ease-in-out;
+        transition: transform 0.5s ease;
       }
     }
 
@@ -78,13 +113,116 @@
       right: 0;
       bottom: 0;
       pointer-events: none;
+
+      @include tablet {
+        @include flex(center,center);
+      }
+     
+      .shape {
+        position: absolute;
+        height: 415px;
+        width: 415px;
+        right: 0;
+        bottom: 0;
+        border-radius: 60% 40% 61% 39% / 64% 63% 37% 36%   ;
+        transition: border-radius 8s ease;
+        background-color: $second-bg-color;
+        z-index: -1;
+        animation: border infinite 8s ;
+      @include tablet {
+        height: 412px;
+        width: 412px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      @include tablet {
+        height: 350px;
+        width: 350px;
+       
+      }
+      }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transform: scale(0) rotate(65deg);
         transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 50;
+        @include tablet {
+          flex: unset;
+          height: 500px;
+          width: 500px;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        @include mobile {
+          height: 250px;
+          width: 250px;
+        }
       }
     }
+  }
+  &__control {
+    $varHero: -100px;
+    transform: all 0.5s ease;
+
+    &__left {
+      position: absolute;
+      top: 50%;
+      left: $varHero;
+      border-radius: 50%;
+      background-color: $txt-second-color;
+      @include flex(center, center);
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      i {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+    &__right {
+      position: absolute;
+      top: 50%;
+      right: $varHero;
+      border-radius: 50%;
+      background-color: $txt-second-color;
+      @include flex(center, center);
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+@keyframes border {
+  0% {
+    border-radius: 37% 63% 79% 21% / 52% 66% 34% 48%  ;
+  }
+  25% {
+    border-radius: 64% 36% 79% 21% / 43% 77% 23% 57%  ;
+  }
+  50% {
+    border-radius: 78% 22% 89% 11% / 21% 89% 11% 79%  ;
+  }
+  75% {
+    border-radius: 64% 36% 79% 21% / 43% 77% 23% 57% ;
+  }
+  100% {
+    border-radius: 37% 63% 79% 21% / 52% 66% 34% 48% ;
   }
 }
