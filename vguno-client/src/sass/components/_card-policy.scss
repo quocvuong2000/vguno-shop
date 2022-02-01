@@ -1,0 +1,25 @@
+.policy {
+    @include flex(center,center);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 20px;
+    position: relative;
+    transition: transform .3s ease;
+
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+    &__icon {
+        @include flex(center,center);
+        font-size: 2rem;
+        width: 15%;
+    }
+    &__content {
+        padding: 1rem;
+        &__title {
+            font-weight: 600;
+        }
+    }
+    
+
+}
