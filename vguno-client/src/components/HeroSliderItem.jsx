@@ -18,7 +18,7 @@ const HeroSliderItem = (props) => {
         </div>
         <div className="hero-slider__item__info__btn">
             <Link to={item.path}>
-              <Button icon="bxs-game" animate={true}>Mua ngay</Button>
+              <Button icon="bx-cart" animate={true}>Mua ngay</Button>
             </Link>
         </div>
       </div>

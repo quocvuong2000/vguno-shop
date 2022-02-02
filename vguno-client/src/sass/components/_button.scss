@@ -7,7 +7,7 @@
   text-transform: uppercase;
   font-weight: 600;
   background-color: #000;
-  border-radius: 19px;
+  border-radius: 14px;
   cursor: pointer;
   box-shadow: rgba(111, 103, 100, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
@@ -39,6 +39,9 @@
   }
   &-animate:hover &__txt {
     transform: translateX(100%);
+  }
+  &-sm {
+    border-radius: 0;
   }
   &-sm &__txt {
       padding: 0.7rem 1.7rem;

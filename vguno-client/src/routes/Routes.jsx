@@ -10,8 +10,8 @@ import Product from '../pages/Product';
 const Routes = () => {
   return <Switch>
     <Route path='/' element={<Home/>}></Route>
-    <Route path='/category' element={<Categories />}></Route>
-    <Route path='/category/:id' element={<Product/>}></Route>
+    <Route path='/categories' element={<Categories />}></Route>
+    <Route path='/categories/:id' element={<Product/>}></Route>
     <Route path='/cart' element={<Cart/>}></Route>
   </Switch>;
 };
