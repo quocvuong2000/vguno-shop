@@ -20,3 +20,5 @@ const brands = [
     display: "JBL",
   },
 ];
+
+export default brands;

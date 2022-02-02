@@ -10,6 +10,7 @@
   border-radius: 19px;
   cursor: pointer;
   box-shadow: rgba(111, 103, 100, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
 
   &__icon,
   &__txt {
@@ -39,9 +40,8 @@
   &-animate:hover &__txt {
     transform: translateX(100%);
   }
-  &-sm {
-    &__txt {
-      padding: 0.7rem 1.4rem;
-    }
+  &-sm &__txt {
+      padding: 0.7rem 1.7rem;
+      font-size: 11px;
   }
 }

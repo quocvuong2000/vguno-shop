@@ -1,0 +1,86 @@
+.product {
+  @include flex(center, center);
+  flex-direction: column;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+  &:hover {
+    box-shadow: rgba(48, 49, 51, 0.2) 0px 8px 24px;
+  }
+
+  &:hover &__interact {
+    transform: translateY(100%);
+    opacity: 1;
+    visibility: visible;
+  }
+  &__image {
+    padding: 20px;
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__interact {
+    @include flex(stretch, center);
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(200%);
+    top: 50%;
+    opacity: 0;
+    width: 100%;
+    padding: 1rem;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background-color: $second-bg-color;
+    i,
+    &__btn {
+      background-color: #000;
+      color: #fff;
+    }
+    i {
+      @include flex(center, center);
+      font-size: 1.3rem;
+      border: solid 2px #eee;
+      padding: 5px;
+      border-radius: 20px;
+      margin-left: 5px;
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: solid 2px #000;
+      }
+    }
+    &__btn {
+      @include flex(center, center);
+      font-size: 0.8rem;
+      border: solid 2px #eee;
+      padding: 5px 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: solid 2px #000;
+      }
+    }
+  }
+  &__info {
+    padding: 0px 20px 10px 20px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    &__title {
+      font-weight: 600;
+      line-height: 1.8rem;
+      font-size: 1.3rem;
+    }
+    &__price {
+      margin-top: 10px;
+      color: rgb(167, 68, 68);
+      font-size: 1.2rem;
+    }
+  }
+}

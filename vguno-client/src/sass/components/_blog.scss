@@ -1,0 +1,26 @@
+.blog {
+    padding: 80px;
+  &__item {
+    @include flex(strech, center);
+    padding: 30px;
+
+    &__image {
+      width: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      flex: 1;
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+    }
+  }
+}
