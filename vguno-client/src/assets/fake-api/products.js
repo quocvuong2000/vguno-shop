@@ -167,10 +167,13 @@ const getNumberProducts = (number) => {
 
 const getProductByBrand = (brand) => products.find(product => product.brand.toString() === brand.brandId.toString());
 
+const getProductById = (id) => products.find(product => product.productId.toString() === id.toString());
+
 const productData = {
     getAllProducts,
     getNumberProducts,
-    getProductByBrand
+    getProductByBrand,
+    getProductById
 }
 
 export default productData;
