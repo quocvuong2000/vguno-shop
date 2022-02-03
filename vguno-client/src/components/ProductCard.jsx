@@ -10,18 +10,18 @@ const ProductCard = (props) => {
 
   
   return (
-    <div className="product">
-      <div className="product__image">
+    <div className="product-card">
+      <div className="product-card__image">
         <img src={product.image} alt="" />
       </div>
-      <div className="product__interact">
-          <div className="product__interact__btn" onClick={() => navigate('/categories/' + product.productId)}>Mua ngay</div>
+      <div className="product-card__interact">
+          <div className="product-card__interact__btn" onClick={() => navigate('/categories/' + product.productId)}>Mua ngay</div>
           <i className='bx bxs-cart-add'></i>
           <i className='bx bx-heart-circle' ></i>
       </div>
-      <div className="product__info">
-        <div className="product__info__title">{product.title}</div>
-        <div className="product__info__price">
+      <div className="product-card__info">
+        <div className="product-card__info__title">{product.title}</div>
+        <div className="product-card__info__price">
             {numberWithCommas(product.price)} VND
         </div>
       </div>
