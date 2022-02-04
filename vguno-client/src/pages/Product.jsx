@@ -5,6 +5,7 @@ import Helmet from "../components/Helmet";
 import Section, { SectionTitle, SectionBody } from "../components/Section";
 import Grid from "../components/Grid";
 import ProductCard from "../components/ProductCard";
+import ProductView from "../components/ProductView";
 
 import productData from "../assets/fake-api/products";
 
@@ -15,20 +16,20 @@ const Product = () => {
   // console.log(productData.getProductById(productId));
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [productId]);
   return (
     <Helmet name={product.title}>
       <Section>
         <SectionBody>
           <div className="container">
-            ell
+            <ProductView product={product}></ProductView>
           </div>
         </SectionBody>
       </Section>
       <Section>
         <SectionTitle>sản phẩm khác</SectionTitle>
         <SectionBody>
-          <Grid col={4} mdCol={3} smCol={1} gap={20}>
+          <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.getNumberProducts(4).map((item,index) => {
               return <ProductCard product={item} key={index}></ProductCard>
             })}

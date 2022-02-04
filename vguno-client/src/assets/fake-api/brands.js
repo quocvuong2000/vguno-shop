@@ -21,4 +21,11 @@ const brands = [
   },
 ];
 
-export default brands;
+const getAllBrands = () => brands;
+const getDisplayById = (id) =>  brands.find(brand => brand.brandId.toString() === id.toString()).display;
+
+const brandData = {
+  getAllBrands,
+  getDisplayById
+}
+export default brandData;

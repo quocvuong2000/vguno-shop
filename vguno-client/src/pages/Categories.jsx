@@ -40,7 +40,7 @@ const Categories = () => {
           <div className="category__filters__item">
             <div className="category__filters__item__title">thương hiệu</div>
             <select className="category__filters__item__select">
-              {brandsData.map((item, index) => {
+              {brandsData.getAllBrands().map((item, index) => {
                 return (
                   <option value={item.brandId} key={index}>
                     {item.display}
@@ -52,7 +52,7 @@ const Categories = () => {
           <div className="category__filters__item">
             <div className="category__filters__item__title">Danh mục</div>
             <div className="category__filters__item__checkbox">
-              {categoryData.map((item, index) => {
+              {categoryData.getAllCategory().map((item, index) => {
                 return <Checkbox label={item.display} key={index}></Checkbox>;
               })}
             </div>

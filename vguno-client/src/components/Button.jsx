@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 const Button = (props) => {
   const animate = props.animate ? "btn-animate" : "";
   const size = props.size ? `btn-${props.size}` : "";
+  const animate2 = props.animate2 ? "btn-animate2" : "";
   return (
     <button
-      className={`btn ${animate} ${size}`}
+      className={`btn ${animate} ${size} ${animate2}`}
       onClick={() => props.onClick()}
     >
       <div className="btn__txt">
@@ -24,6 +25,7 @@ Button.propTypes = {
   animate: PropTypes.bool,
   size: PropTypes.string,
   onClick: PropTypes.func,
+  animate2: PropTypes.bool,
 };
 
 export default Button;

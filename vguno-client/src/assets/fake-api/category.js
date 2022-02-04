@@ -17,4 +17,12 @@ const category = [
     }
 ]
 
-export default category;
+const getAllCategory = () => category
+const getDisplayById = (id) => category.find(category => category.catId.toString() === id.toString()).display;
+
+const categoryData = {
+    getAllCategory,
+    getDisplayById
+}
+
+export default categoryData;

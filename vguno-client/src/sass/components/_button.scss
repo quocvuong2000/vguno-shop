@@ -15,11 +15,13 @@
   &__icon,
   &__txt {
     display: block;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
   }
   &__txt {
-    padding: 1rem 2rem;
+    padding: .8rem 1.8rem;
     color: #fff;
+  border: solid 2px #000;
+
   }
 
   &__icon {
@@ -40,11 +42,18 @@
   &-animate:hover &__txt {
     transform: translateX(100%);
   }
+  
+  &-animate2:hover &__txt {
+    background-color: #fff;
+    color: #000;
+    border: solid 2px #000;
+  }
+
   &-sm {
     border-radius: 0;
   }
   &-sm &__txt {
-      padding: 0.7rem 1.7rem;
+      padding: 0.5rem 1.4rem;
       font-size: 11px;
   }
 }

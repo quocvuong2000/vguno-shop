@@ -1,0 +1,128 @@
+.product {
+  @include flex(center, center);
+  flex-direction: column;
+  margin-top: -20px;
+  padding: 0 50px;
+  @include tablet {
+    padding: 0;
+  }
+  &-top {
+    @include flex(flex-start, flex-start);
+    width: 100%;
+    padding: 2rem 10rem;
+    margin-bottom: 20px;
+    border: solid 3px #eee;
+    border-radius: 20px;
+    @include tablet {
+      padding: 1rem 2rem;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+    &__images {
+      @include flex(flex-start, center);
+      flex-direction: column;
+      flex-grow: 1;
+      @include tablet {
+        width: 50%;
+        flex-grow: unset;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        @include tablet {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      &__main {
+        border: solid 2px $txt-second-color;
+        padding: 30px;
+        border-radius: 20px;
+      }
+      &__sub {
+        @include flex(flex-start, flex-start);
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      &__sub > img {
+        margin: 10px 20px 10px 0;
+        padding: 2px;
+        cursor: pointer;
+        border: solid 1px $txt-second-color;
+      }
+    }
+    &__info {
+      width: 100%;
+      padding: 0 30px;
+      @include mobile {
+          padding: 0;
+      }
+
+      &__title {
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: uppercase;
+        @include mobile {
+            font-size: 1.6rem;
+        }
+       
+      }
+      &__price {
+        margin-top: 10px;
+        color: #a74444;
+        font-size: 1.8rem;
+        font-weight: 600;
+        @include mobile {
+            font-size: 1.4rem;
+        }
+      }
+      &__brand {
+        font-size: 1.4rem;
+
+        @include mobile {
+            font-size: 1.2rem;
+
+        }
+      }
+      &__category {
+        font-size: 1.4rem;
+        @include mobile {
+            font-size: 1.2rem;
+
+        }
+      }
+      &__cart > button {
+        margin-right: 20px;
+        @include mobile {
+            margin-right: 10px;
+
+
+        }
+      }
+    }
+    &__info > div {
+      margin-bottom: 20px;
+    }
+  }
+  &-bottom {
+    width: 100%;
+    margin: 0 50px;
+
+    &__title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+}
