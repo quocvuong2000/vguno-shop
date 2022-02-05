@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -15,8 +15,8 @@ const Header = () => {
   const headerContentRef = useRef(null);
 
   const openMenuHandler = () => {
-    headerContentRef.current.classList.toggle('active');
-  }
+    headerContentRef.current.classList.toggle("active");
+  };
   return (
     <div className="header">
       <div className="container">
@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="header__toggle__button" onClick={openMenuHandler}>
-          <i className="bx bx-menu"></i>
+            <i className="bx bx-menu"></i>
           </div>
         </div>
         <div className="header-content" ref={headerContentRef}>
@@ -48,9 +48,30 @@ const Header = () => {
             </div>
             <div className="header-top__cart">
               <ul className="header-top__cart__list">
-                <li className="bx bx-bell"></li>
-                <li className="bx bx-user"></li>
-                <li className="bx bx-cart"></li>
+                <Link to={"/"}>
+                  <li className="header-top__cart__list__item">
+                    <i className="bx bx-bell"></i>
+                    <span>Thông báo</span>
+
+                  </li>
+                </Link>
+
+                <Link to={"/cart"}>
+                  <li className="header-top__cart__list__item">
+                    <i className="bx bx-user"></i>
+                    <span>Đăng nhập</span>
+                  </li>
+                </Link>
+
+                <Link to={"/cart"}>
+                <li className="header-top__cart__list__item header-top__cart__list__item__main">
+                    <i className="bx bx-cart"></i>
+                    <span>Giỏ hàng</span>
+                    <div className="notification">
+                      <span>0</span>
+                    </div>
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>

@@ -1,0 +1,78 @@
+.cart-item {
+  @include flex(center, flex-start);
+  border: solid 1px #eee;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  @include mobile {
+    padding: 0;
+  }
+
+  &__image {
+    width: 20%;
+    padding: 10px;
+    @include tablet {
+      width: 30%;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      @include mobile {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  &__info {
+    width: 30%;
+    @include tablet {
+      width: 60%;
+    }
+    @include mobile {
+      width: 45%;
+      font-size: 0.9rem;
+    }
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      @include mobile {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  &__info > div {
+    margin-bottom: 5px;
+  }
+  &__total {
+    @include flex(flex-end, stretch);
+    flex-direction: column;
+    flex: 1;
+
+    &__quantity {
+      font-size: 1.4rem;
+      border: solid 1px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 2px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      @include flex(center, center);
+      @include mobile {
+        font-size: 1rem;
+      }
+
+      i {
+        border: solid 1px $txt-second-color;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+      }
+      span {
+        padding: 0 20px;
+      }
+    }
+  }
+}

@@ -36,7 +36,7 @@
     @include flex(center, flex-start);
     height: 80px;
     &__logo {
-      @include flex(center, flex-end);
+      @include flex(center, center);
       width: 20%;
       cursor: pointer;
 
@@ -47,7 +47,7 @@
     &__search {
       width: 50%;
 
-      @include flex(center, flex-end);
+      @include flex(center, center);
       &__input {
         width: 500px;
         height: 40px;
@@ -80,12 +80,43 @@
       @include flex(center, center);
       &__list {
         @include flex(center, center);
-        font-size: 2rem;
-        li ~ li {
-          margin-left: 20px;
-        }
-        li {
+
+        &__item {
           cursor: pointer;
+          margin-left: 20px;
+          @include flex(center, center);
+          flex-direction: row;
+          
+          i {
+          @include flex(center, center);
+            margin-right: 10px;
+            font-size: 1.8rem;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 5px;
+          }
+          span {
+            font-size: 1.1rem;
+          }
+          &:hover {
+            color: $main-color;
+          }
+          &__main {
+            position: relative;
+
+            .notification {
+              position: absolute;
+              left: 25%;
+              top: 0;
+              background-color: #eee;
+              padding: 2px 6px;
+              border-radius: 20px;
+
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
         }
       }
     }
@@ -291,7 +322,7 @@
       }
       &__close {
         display: block;
-        $closeVar : 18px;
+        $closeVar: 18px;
         position: absolute;
         right: $closeVar;
         top: $closeVar;
