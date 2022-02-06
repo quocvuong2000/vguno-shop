@@ -86,14 +86,20 @@
           margin-left: 20px;
           @include flex(center, center);
           flex-direction: row;
-          
+          @include mobile {
+            margin-left: 8px;
+          }
           i {
-          @include flex(center, center);
+            @include flex(center, center);
             margin-right: 10px;
             font-size: 1.8rem;
             border: 1px solid;
             border-radius: 20px;
             padding: 5px;
+            @include mobile {
+              font-size: 1.2rem;
+              margin-right: 5px;
+            }
           }
           span {
             font-size: 1.1rem;
@@ -114,6 +120,12 @@
 
               span {
                 font-size: 1rem;
+                @include mobile {
+                  font-size: 0.8rem;
+                }
+              }
+              @include mobile {
+                padding: 1px 3px;
               }
             }
           }

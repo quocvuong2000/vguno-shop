@@ -1,0 +1,52 @@
+.main {
+    min-height: 400px;
+    @include tablet {
+      min-height: 45vh;
+    }
+  }
+  
+  .register {
+    @include flex(center, center);
+    margin-top: calc(#{$header-height} * -1);
+    @include tablet {
+      margin-top: -40px;
+      
+    }
+  
+    &__container {
+      @include flex(center, center);
+      flex-direction: column;
+      border: solid 1px black;
+      width: 30%;
+      padding: 30px 50px;
+      border-radius: 20px;
+      @include tablet {
+        width: 50%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+  
+    &__title {
+      font-weight: 600;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    &__content {
+      margin-top: 20px;
+  
+      form {
+        @include flex(center, center);
+        flex-direction: column;
+      }
+    }
+    &__redirect {
+        margin-top: 20px;
+        font-weight: 600;
+        &:hover {
+          color: $main-color;
+        }
+      }
+  }
+  

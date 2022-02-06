@@ -17,6 +17,7 @@ const products = [
         image: img1,
         category: 1,
         brand: 1,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -26,6 +27,7 @@ const products = [
         image: img2,
         category: 1,
         brand: 1,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -35,6 +37,7 @@ const products = [
         image: img3,
         category: 1,
         brand: 2,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -44,6 +47,7 @@ const products = [
         image: img4,
         category: 2,
         brand: 3,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -53,6 +57,7 @@ const products = [
         image: img5,
         category: 4,
         brand: 3,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -62,6 +67,7 @@ const products = [
         image: img6,
         category: 4,
         brand: 4,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -71,6 +77,7 @@ const products = [
         image: img7,
         category: 3,
         brand: 5,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -80,6 +87,7 @@ const products = [
         image: img8,
         category: 3,
         brand: 5,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -89,6 +97,7 @@ const products = [
         image: img1,
         category: 1,
         brand: 1,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -98,6 +107,7 @@ const products = [
         image: img2,
         category: 1,
         brand: 1,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -107,6 +117,7 @@ const products = [
         image: img3,
         category: 1,
         brand: 2,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -116,6 +127,7 @@ const products = [
         image: img4,
         category: 2,
         brand: 3,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -125,6 +137,7 @@ const products = [
         image: img5,
         category: 4,
         brand: 3,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -134,6 +147,7 @@ const products = [
         image: img6,
         category: 4,
         brand: 4,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -143,6 +157,7 @@ const products = [
         image: img7,
         category: 3,
         brand: 5,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
     {
@@ -152,6 +167,7 @@ const products = [
         image: img8,
         category: 3,
         brand: 5,
+        stocking : true,
         description: "Đầu tiên, laptop MSI Gaming GL75 Leopard sở hữu thiết kế mỏng và nhẹ, hoàn toàn đi ngược lại với đặc trưng thiết kế của hãng từ trước đến nay. Qua đó, giúp người dùng dễ dàng cầm nắm và di chuyển đến khắp mọi nơi.Thiết kế nhỏ gọn, màn hình đến 17.3 inchesMàn hình luôn là yếu tố đáng để mong chờ trên những chiếc laptop gaming và thật vậy hãng không làm cho chúng ta thất vọng khi nó được tích hợp một màn hình kích thước khá lớn 17.3 inches. Đi kèm là tấm nền IPS cho chất lượng ảnh trung thực phù hợp để người dùng có thể thực hiện thêm một số công việc thiết kế ảnh. Tuy độ phân giải FullHD nhưng bù lại chúng ta lại có tần số quét 144H, qua đó, giúp các chuyển động trên màn hình vô cùng mượt mà và ổn định.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 TiNhiều người sẽ khá thất vọng vì chiếc máy laptop MSI Gaming GL75 Leopard chỉ được tích hợp CPU Core i5-10200H mà không phải Core i7. Tuy nhiên Core i5-10200H lại chính là dòng chip mới nhất và mạnh mẽ nhất trong phân khúc tầm trung hiện tại.Bổ sung cho sức mạnh của laptop đó là 8GB RAM mang đến khả năng xử lý đa nhiệm vô cùng mượt mà. Hơn nữa bộ nhớ trong 512 GB SSD cung cấp tốc độ xử lý nhanh chóng.Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti"
     },
 ];

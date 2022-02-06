@@ -1,10 +1,17 @@
 .main {
   min-height: 400px;
+  @include tablet {
+    min-height: 45vh;
+  }
 }
 
 .login {
   @include flex(center, center);
   margin-top: -50px;
+  @include tablet {
+    margin-top: 0;
+
+  }
 
   &__container {
     @include flex(center, center);
@@ -13,6 +20,12 @@
     width: 30%;
     padding: 30px 50px;
     border-radius: 20px;
+    @include tablet {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -26,6 +39,13 @@
     form {
       @include flex(center, center);
       flex-direction: column;
+    }
+  }
+  &__redirect {
+    margin-top: 20px;
+    font-weight: 600;
+    &:hover {
+      color: $main-color;
     }
   }
 }

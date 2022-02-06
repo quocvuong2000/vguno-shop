@@ -33,7 +33,12 @@ const ProductView = (props) => {
           <div className="product-top__info__category">
             Danh mục: {categoryData.getDisplayById(product.category)}
           </div>
-          <div className="product-top__info__status">Trạng thái: còn hàng</div>
+          <div className="product-top__info__status">Trạng thái: {product.stocking ? "Còn hàng" : "Hết hàng"}</div>
+          <div className="product-top__info__quantity">
+          <i className="bx bx-minus"></i>
+          <span>0</span>
+          <i className="bx bx-plus"></i>
+          </div>
           <div className="product-top__info__cart">
             <Button size="sm" animate2={true}>
               mua ngay

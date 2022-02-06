@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const FormInput = (props) => {
-    const {label,errorMessage, ...inputProps} = props;
+  const [focused, setFocused] = useState(false);
+    const {label,errorMessage,onChange, ...inputProps} = props;
+
+    const onBlurHandler = () => {
+      setFocused(true);
+    }
   return <div className='form-input'>
-      <label>{props.label}</label>
+      <label>{label}</label>
       <input 
       {...inputProps}
-      onChange = {props.onChange}
+      onChange = {onChange}
+      autoComplete="off"
+      onBlur={onBlurHandler}
+      focused = {focused.toString()}
       />
-      <span>{props.error}</span>
+      <span>{errorMessage}</span>
   </div>;
 };
 
