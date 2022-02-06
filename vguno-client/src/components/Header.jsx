@@ -56,7 +56,7 @@ const Header = () => {
                   </li>
                 </Link>
 
-                <Link to={"/cart"}>
+                <Link to={"/login"}>
                   <li className="header-top__cart__list__item">
                     <i className="bx bx-user"></i>
                     <span>Đăng nhập</span>

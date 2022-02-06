@@ -1,0 +1,17 @@
+.form-input {
+    @include flex(center,center);
+    flex-wrap: wrap;
+
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    input {
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+}
