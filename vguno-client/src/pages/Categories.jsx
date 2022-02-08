@@ -1,4 +1,4 @@
-import React,{useRef} from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import Helmet from "../components/Helmet";
 
 import Checkbox from "../components/Checkbox";
@@ -15,9 +15,52 @@ import asus from "../assets/images/banner/asus.jpg";
 
 const Categories = () => {
   const filterToggleRef = useRef(null);
+  const [products, setProducts] = useState([]);
+  const [filters, setFilters] = useState({
+    brand: "",
+    price: 0,
+    category: [],
+  });
+ 
+  useEffect(() => {
+    setProducts(productData.getAllProducts());
+  }, []);
+
+  const handleFilterProduct = useCallback(() => {
+    let temp = productData.getAllProducts();
+
+    if(filters.brand !== "") {
+      temp = temp.filter(product => product.brand.toString().indexOf(filters.brand.toString()) !== -1);
+    }
+    if(filters.category.length > 0) {
+      temp = temp.filter(product=> filters.category.includes(product.category));
+    }
+    if(filters.price > 0) {
+      temp= temp.filter(product => product.price > filters.price)
+    }
+
+    setProducts(temp); 
+  }, [filters]);
+
+  useEffect(()=> {
+    handleFilterProduct();
+  },[handleFilterProduct])
+
+
   const toggleFilterHandler = () => {
-    return filterToggleRef.current.classList.toggle('active');
-  }
+    return filterToggleRef.current.classList.toggle("active");
+  };
+
+  const checkboxHandler = (checked, item) => {
+    if (checked) {
+      setFilters({ ...filters, category: [...filters.category, item.catId] });
+    } else {
+      // vì bỏ CHECKED nên lọc ra những thằng KHÁC thằng ĐÃ CHECK này
+      const newCat = filters.category.filter((cat) => cat !== item.catId);
+      setFilters({ ...filters, category: newCat });
+    }
+  };
+
   return (
     <Helmet name="Danh mục">
       <div className="category-banner">
@@ -26,7 +69,10 @@ const Categories = () => {
       <div className="category-title">danh sách sản phẩm</div>
       <div className="category">
         <div className="category__filters" ref={filterToggleRef}>
-          <div className="category__filters__close" onClick={toggleFilterHandler}>
+          <div
+            className="category__filters__close"
+            onClick={toggleFilterHandler}
+          >
             <i className="bx bx-chevrons-left"></i>
           </div>
           <div className="category__filters__item">
@@ -39,7 +85,13 @@ const Categories = () => {
           </div>
           <div className="category__filters__item">
             <div className="category__filters__item__title">thương hiệu</div>
-            <select className="category__filters__item__select">
+            <select
+              className="category__filters__item__select"
+              onChange={(e) =>
+                setFilters({ ...filters, brand: e.target.value })
+              }
+            >
+              <option value="">Tất cả</option>
               {brandsData.getAllBrands().map((item, index) => {
                 return (
                   <option value={item.brandId} key={index}>
@@ -53,23 +105,31 @@ const Categories = () => {
             <div className="category__filters__item__title">Danh mục</div>
             <div className="category__filters__item__checkbox">
               {categoryData.getAllCategory().map((item, index) => {
-                return <Checkbox label={item.display} key={index}></Checkbox>;
+                return (
+                  <Checkbox
+                    label={item.display}
+                    key={index}
+                    onChange={(input) => checkboxHandler(input.checked, item)}
+                  ></Checkbox>
+                );
               })}
             </div>
           </div>
           <div className="category__filters__item">
             <div className="category__filters__item__title">Bộ lọc giá</div>
-            <PriceSlider></PriceSlider>
+            <PriceSlider onChange={(value) => setFilters({...filters, price : value})}></PriceSlider>
           </div>
         </div>
         <div className="category__toggle">
-            <Button size="sm" onClick={toggleFilterHandler}>lọc sản phẩm</Button>
-          </div>
+          <Button size="sm" onClick={toggleFilterHandler}>
+            lọc sản phẩm
+          </Button>
+        </div>
         <div className="category__products">
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getAllProducts().map((item, index) => {
-              return <ProductCard product={item} key={index}></ProductCard>;
-            })}
+            {products?.map((item, index) => {
+                  return <ProductCard product={item} key={index}></ProductCard>;
+                })}
           </Grid>
         </div>
       </div>

@@ -43,10 +43,13 @@ const PrettoSlider = styled(Slider)({
     },
   },
 });
-export default function PriceSlider() {
+const PriceSlider = (props) => {
   const [value, setValue] = useState(0);
   const onChangeHanlde = (event, value) => {
     setValue(value);
+    if(props.onChange) {
+      props.onChange(value);
+    }
   };
   return (
     <Box sx={{ width: 200 }}>
@@ -56,7 +59,7 @@ export default function PriceSlider() {
       <PrettoSlider
         min={0}
         step={100000}
-        max={50000000}
+        max={30000000}
         valueLabelDisplay="auto"
         aria-label="pretto slider"
         valueLabelFormat={(value => {
@@ -68,3 +71,4 @@ export default function PriceSlider() {
     </Box>
   );
 }
+export default PriceSlider;

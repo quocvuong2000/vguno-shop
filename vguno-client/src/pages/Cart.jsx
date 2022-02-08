@@ -5,6 +5,8 @@ import productData from "../assets/fake-api/products";
 import Button from "../components/Button";
 import CartItem from "../components/CartItem";
 
+import {Link} from 'react-router-dom';
+
 const Cart = () => {
   const test = productData.getProductById(6);
   const test1 = productData.getProductById(2);
@@ -42,10 +44,14 @@ const Cart = () => {
           </div>
         </div>
         <div className="cart__info__btn cart__info__btn__payment">
-          <Button size="stable" animate3={true}>Tiếp tục thanh toán</Button>
+          <Button size="stable" animate3={true}>
+            <Link to={"/payment"}>
+            Tiếp tục thanh toán
+            </Link>
+            </Button>
         </div>
         <div className="cart__info__btn cart__info__btn__cart">
-          <Button size="stable" animate3={true}>tiếp tục mua hàng</Button>
+          <Button size="stable" animate3={true}><Link to={"/categories"}>tiếp tục mua hàng</Link></Button>
         </div>
       </div>
     </div>

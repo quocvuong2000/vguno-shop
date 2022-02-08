@@ -11,6 +11,8 @@ import dd4 from "../assets/images/dropdown-images/Artboard-7-copy-8.png";
 import dd5 from "../assets/images/dropdown-images/Artboard-8-8-1.png";
 import dd6 from "../assets/images/dropdown-images/Artboard-8-copy-2-8.png";
 
+import category from "../assets/fake-api/category";
+
 const Header = () => {
   const headerContentRef = useRef(null);
 
@@ -52,7 +54,6 @@ const Header = () => {
                   <li className="header-top__cart__list__item">
                     <i className="bx bx-bell"></i>
                     <span>Thông báo</span>
-
                   </li>
                 </Link>
 
@@ -64,7 +65,7 @@ const Header = () => {
                 </Link>
 
                 <Link to={"/cart"}>
-                <li className="header-top__cart__list__item header-top__cart__list__item__main">
+                  <li className="header-top__cart__list__item header-top__cart__list__item__main">
                     <i className="bx bx-cart"></i>
                     <span>Giỏ hàng</span>
                     <div className="notification">
@@ -91,30 +92,14 @@ const Header = () => {
                       Danh mục sản phẩm
                     </div>
                     <ul className="header-bottom__dropdown__left__list">
-                      <Link to={"/"}>
-                        <li className="header-bottom__dropdown__left__list__item">
-                          <i className="bx bx-laptop"></i>
-                          Laptop
-                        </li>
-                      </Link>
-                      <Link to={"/"}>
-                        <li className="header-bottom__dropdown__left__list__item">
-                          <i className="bx bx-headphone"></i>
-                          Tai nghe
-                        </li>
-                      </Link>
-                      <Link to={"/"}>
-                        <li className="header-bottom__dropdown__left__list__item">
-                          <i className="bx bx-mouse"></i>
-                          Chuột
-                        </li>
-                      </Link>
-                      <Link to={"/"}>
-                        <li className="header-bottom__dropdown__left__list__item">
-                          <i className="bx bxs-keyboard"></i>
-                          Bàn phím
-                        </li>
-                      </Link>
+                      {category.getAllCategory().map((item, index) => {
+                        return (
+                          <li className="header-bottom__dropdown__left__list__item" key={index}>
+                            <i className={item.icon}></i>
+                            {item.display}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                   <div className="header-bottom__dropdown__right">
