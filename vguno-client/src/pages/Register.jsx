@@ -4,6 +4,8 @@ import FormInput from "../components/FormInput";
 
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import Helmet from '../components/Helmet';
+
 
 const Register = () => {
   const [values, setValues] = useState({
@@ -62,33 +64,35 @@ const Register = () => {
   };
 
   return (
-    <div className="register">
-      <div className="register__container">
-        <div className="register__title">Đăng kí</div>
-        <div className="register__content">
-          <form onSubmit={onHandleSubmit}>
-            {inputs.map((input, index) => {
-              return (
-                <FormInput
-                  key={index}
-                  {...input}
-                  value={values[input.name]}
-                  onChange={onChangeHandler}
-                ></FormInput>
-              );
-            })}
-            <Button size="sm" animate2={true}>
-              đăng kí
-            </Button>
-          </form>
-          <div className="register__redirect">
-          <Link to={"/login"}>
-            <span>Đã có tài khoản? Đăng nhập</span>
-          </Link>
+    <Helmet name="Đăng kí">
+      <div className="register">
+        <div className="register__container">
+          <div className="register__title">Đăng kí</div>
+          <div className="register__content">
+            <form onSubmit={onHandleSubmit}>
+              {inputs.map((input, index) => {
+                return (
+                  <FormInput
+                    key={index}
+                    {...input}
+                    value={values[input.name]}
+                    onChange={onChangeHandler}
+                  ></FormInput>
+                );
+              })}
+              <Button size="sm" animate2={true}>
+                đăng kí
+              </Button>
+            </form>
+            <div className="register__redirect">
+            <Link to={"/login"}>
+              <span>Đã có tài khoản? Đăng nhập</span>
+            </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Helmet>
   );
 };
 

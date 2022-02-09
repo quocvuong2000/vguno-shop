@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -13,14 +13,38 @@ import dd6 from "../assets/images/dropdown-images/Artboard-8-copy-2-8.png";
 
 import category from "../assets/fake-api/category";
 
+import { useSelector } from "react-redux";
+
 const Header = () => {
   const headerContentRef = useRef(null);
+  const headerShrink = useRef(null);
+  const [totalItem, setTotalItem] = useState(0);
+
+  const cartItem = useSelector((state) => state.cartItem.value);
+  useEffect(() => {
+    setTotalItem(cartItem.reduce((total, item) => (total += item.quantity), 0));
+  }, [cartItem]);
 
   const openMenuHandler = () => {
     headerContentRef.current.classList.toggle("active");
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerShrink.current.classList.add("shrink");
+      } else {
+        headerShrink.current.classList.remove("shrink");
+      }
+    });
+
+    return () => window.removeEventListener("scroll");
+  }, []);
   return (
-    <div className="header">
+    <div className="header" ref={headerShrink}>
       <div className="container">
         <div className="header__toggle">
           <div className="header__toggle__logo">
@@ -69,7 +93,7 @@ const Header = () => {
                     <i className="bx bx-cart"></i>
                     <span>Giỏ hàng</span>
                     <div className="notification">
-                      <span>0</span>
+                      <span>{totalItem}</span>
                     </div>
                   </li>
                 </Link>
@@ -94,7 +118,10 @@ const Header = () => {
                     <ul className="header-bottom__dropdown__left__list">
                       {category.getAllCategory().map((item, index) => {
                         return (
-                          <li className="header-bottom__dropdown__left__list__item" key={index}>
+                          <li
+                            className="header-bottom__dropdown__left__list__item"
+                            key={index}
+                          >
                             <i className={item.icon}></i>
                             {item.display}
                           </li>

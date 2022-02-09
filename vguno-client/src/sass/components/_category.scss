@@ -49,7 +49,7 @@
     border-radius: 20px;
     border: solid 2px #eee;
     position: sticky;
-    top: 20px;
+    top: calc(#{$shrink} + 10px);
     @include tablet {
       position: fixed;
       top: 0;

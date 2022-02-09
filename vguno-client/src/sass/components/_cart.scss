@@ -1,17 +1,21 @@
 .cart {
   @include flex(flex-start, center);
   
-  padding: 0 50px;
+  padding: 0 40px;
   margin-top: calc(#{$header-height} * -1);
   @include tablet {
     flex-direction: column;
+  margin-top: calc(#{$header-tablet-height} * -1);
+
   }
   @include mobile {
     padding: 0;
+  margin-top: calc(#{$header-mobile-height} * -1);
+
   }
 
   &__item {
-    width: 70%;
+    width: 65%;
     @include tablet {
       width: 100%;
     }
@@ -30,7 +34,7 @@
       border-radius: 20px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       width: 80%;
-      padding: 20px;
+      padding: 15px;
       margin-bottom: 20px;
       &__title {
         font-size: 1.8rem;
@@ -40,7 +44,7 @@
       }
       &__item {
         @include flex(flex-start, space-between);
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         &__main {
           border-top: solid 2px #000;
           font-weight: 600;

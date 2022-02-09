@@ -10,7 +10,7 @@ const Button = (props) => {
   return (
     <button
       className={`btn ${animate} ${size} ${animate2} ${animate3} ${stable}`}
-      onClick={() => props.onClick()}
+      onClick={props.onClick}
     >
       <div className="btn__txt">
         <span>{props.children}</span>
