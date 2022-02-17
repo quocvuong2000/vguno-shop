@@ -1,0 +1,19 @@
+@use '../sass/abstracts/' as *;
+
+.main {
+    padding-left:  $sideBarWidth;
+    overflow-x: hidden;
+
+    @include tablet {
+        padding-left:  0;
+    }
+
+    &__content {
+        min-height: 100vh;
+        padding: $spacing;
+        
+        @include tablet {
+            padding : $mobileSpacing;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use "../../sass/abstracts/" as *;
+
+.sidebar {
+  @include flex(stretch, flex-start);
+  flex-direction: column;
+  width: $sideBarWidth;
+  height: 100vh;
+  position: fixed;
+  color: $txtColor;
+  background-color: $mainBg;
+  top: 0;
+  z-index: 100;
+
+  &__logo {
+    @include flex();
+    height: $sideBarLogoHeight;
+
+    img {
+      --var: 55px;
+      width: var(--var);
+      height: var(--var);
+    }
+  }
+  &__menu {
+    @include flex(stretch, flex-start);
+    flex-direction: column;
+    flex-grow: 1;
+    &__item {
+      @include flex(stretch, flex-start);
+      padding-left: 20%;
+      margin-bottom: 2rem;
+      position: relative;
+      transition: color .3s ease-in;
+
+      &__icon {
+        margin-right: 1.2rem;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+
+      &:hover {
+        color: $mainColor;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: $mainColor;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $mainColor;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+      }
+    }
+  }
+}
