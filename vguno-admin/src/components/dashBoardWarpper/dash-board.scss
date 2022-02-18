@@ -1,0 +1,6 @@
+@use '../../sass/abstracts/' as *;
+
+.dashboard {
+    @include flex(center,center);
+    padding: 0 10px;
+}

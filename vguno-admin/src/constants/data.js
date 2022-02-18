@@ -24,12 +24,12 @@ const data = {
             value: '$678',
             percent: 38
         },
-        {
-            title: 'Visits',
-            subtitle: 'Total visits today',
-            value: '2345',
-            percent: 55
-        }
+        // {
+        //     title: 'Visits',
+        //     subtitle: 'Total visits today',
+        //     value: '2345',
+        //     percent: 55
+        // }
     ],
     revenueSummary: {
         title: 'Revenue',

@@ -1,2 +1,29 @@
-@use '../../sass/abstracts/'as *;
+@use "../../sass/abstracts/" as *;
+@use "sass:math";
 
+.topnav {
+  @include flex(center, space-between);
+  margin:  math.div($spacing, 1)*-1 auto auto auto;
+  &__logo {
+    @include flex();
+    --var: 100px;
+    width: var(--var);
+    height: var(--var);
+  }
+
+  &__menu {
+    @include flex();
+    padding: 10px;
+    border-radius: 50px;
+    background-color: $mainBg;
+    &__avatar {
+      --var: 50px;
+      width: var(--var);
+      height: var(--var);
+      border-radius: 50px;
+      overflow: hidden;
+
+      margin-right: 1rem;
+    }
+  }
+}
