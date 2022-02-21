@@ -3,4 +3,7 @@
 .dashboard {
     @include flex(center,center);
     padding: 0 10px;
+    &__main {
+        width: 100%;
+    }
 }

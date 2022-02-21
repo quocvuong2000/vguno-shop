@@ -1,14 +1,7 @@
 @use "../../sass/abstracts/" as *;
 
 .widget-bottom {
-  &__left {
-    @include flex(stretch, flex-start);
-    flex-direction: column;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 30px;
-    background-color: $mainBg;
-    padding: 1rem;
-  }
+  &__left,
   &__right {
     @include flex(stretch, flex-start);
     flex-direction: column;
@@ -16,6 +9,66 @@
     border-radius: 30px;
     background-color: $mainBg;
     padding: 1rem;
+  }
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__item {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #2c2c2c;
+    &__main {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #000;
+    }
 
+    &__username {
+      @include flex(center, flex-start);
+    }
+    &__price {
+      @include flex(center, center);
+    }
+    &__image {
+      border-radius: 20px;
+      overflow: hidden;
+      @include flex();
+
+      img {
+        --var: 40px;
+        width: var(--var);
+        height: var(--var);
+        object-fit: cover;
+        border: solid 1px black;
+        border-radius: 20px;
+      }
+    }
+    &__title {
+      @include flex(center, flex-start);
+    }
+    &__quantity {
+      @include flex(center, center);
+    }
+    &__btn {
+      @include flex(center, center);
+      button {
+        @include flex(center, center);
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #b1abab;
+
+        i {
+          margin-right: 5px;
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }

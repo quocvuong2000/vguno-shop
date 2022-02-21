@@ -12,8 +12,8 @@ const sidebarNav = [
         text: 'Orders'
     },
     {
-        link: '/products',
-        section: 'products',
+        link: '/productmanagement',
+        section: 'productmanagement',
         icon: <i className='bx bx-cube'></i>,
         text: 'Products'
     },
