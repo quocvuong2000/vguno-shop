@@ -1,0 +1,73 @@
+@use "../../../../../sass/abstracts/" as *;
+
+.add-cat {
+  border: solid 1px;
+  padding: 2rem;
+  border-radius: 20px;
+  &__form {
+    &__item {
+      label {
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px;
+        border-radius: 20px;
+        outline: none;
+      }
+    }
+
+    &__icon {
+      @include flex();
+      flex-direction: column;
+      padding: 10px;
+      margin-top: 20px;
+
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__list {
+        width: 60%;
+
+        i {
+          border: solid 1px;
+          padding: 10px;
+          border-radius: 30px;
+          margin-right: 10px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          &:hover {
+              color: white;
+              background-color: black;
+          }
+
+          &.active {
+            color: white;
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    @include flex();
+
+    button {
+      @include flex();
+      padding: 0.8rem 1.2rem;
+      color: white;
+      background-color: teal;
+      outline: none;
+      border-radius: 30px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+
+      i {
+        margin-right: 4px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

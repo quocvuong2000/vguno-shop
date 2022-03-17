@@ -4,7 +4,6 @@
 .topnav {
   @include flex(center, space-between);
   margin:  math.div($spacing, 1)*-1 auto auto auto;
-  border-bottom: solid 5px rgba(0, 0, 0, 0.356);
   border-radius: 5px;
   &__logo {
     @include flex();

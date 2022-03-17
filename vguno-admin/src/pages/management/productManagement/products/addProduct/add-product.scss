@@ -1,0 +1,106 @@
+@use "../../../../../sass/abstracts/" as *;
+
+.add-product {
+  width: 100%;
+  border: solid 1px;
+  padding: 2rem;
+  border-radius: 20px;
+
+  &__form {
+    width: 100%;
+    @include flex(center, center);
+    flex-direction: column;
+    &__input {
+      width: 100%;
+      @include flex(center, flex-end);
+    }
+
+    &__content {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      width: 50%;
+
+      &__item {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+
+        label {
+          margin: 10px 0;
+        }
+        select {
+          padding: 8px 3rem;
+          border-radius: 20px;
+        }
+        textarea {
+          border-radius: 20px;
+
+        }
+        input {
+          border-radius: 20px;
+          padding: 8px;
+          outline: none;
+          border: solid 1px rgb(129, 129, 129);
+        }
+      }
+    }
+
+    &__image {
+      @include flex();
+      width: 50%;
+      position: relative;
+
+      label {
+        cursor: pointer;
+        margin-right: 30px;
+        i {
+          font-size: 2rem;
+          border-radius: 30px;
+          border: solid 1px;
+          padding: 10px;
+          color: white;
+          background-color: teal;
+          &:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+
+      input {
+        position: absolute;
+        visibility: hidden;
+        z-index: -1;
+      }
+
+      img {
+        margin-top: 20px;
+        border: solid 1px rgb(199, 199, 199);
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    @include flex(flex-start,flex-start);
+    margin-top: 30px;
+    button {
+      @include flex();
+      padding: 0.8rem 1.2rem;
+      color: white;
+      background-color: teal;
+      outline: none;
+      border-radius: 30px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+
+      i {
+        margin-right: 4px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

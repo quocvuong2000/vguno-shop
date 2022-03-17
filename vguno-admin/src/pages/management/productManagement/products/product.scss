@@ -1,0 +1,40 @@
+@use '../../../../sass/abstracts/' as *;
+
+.product {
+    @include flex(flex-start,flex-start);
+    flex-direction: column;
+    &__title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    &__add {
+        @include flex(flex-end,flex-end);
+        width: 100%;
+        &__btn {
+            @include flex();
+            padding: 1rem 1.2rem;
+            outline: none;
+            border: none;
+            background-color: #6a5af9;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: .8rem;
+            i {
+                font-size: 1.2rem;
+                margin-right: 3px;
+                transition: margin 0.2s linear;
+            }
+        }
+
+        &:hover &__btn {
+            i {
+                margin-right: 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../../sass/abstracts/' as *;
+
+.customer {
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+}
