@@ -10,6 +10,7 @@ import ProductManagement from "./pages/management/productManagement/ProductManag
 import Products from "./pages/management/productManagement/products/Products";
 import Brands from "./pages/management/productManagement/brands/Brands";
 import Categories from "./pages/management/productManagement/categories/Categories";
+import Login from "./pages/login/Login";
 
 //PRODUCTS
 import DataTableProducts from "./components/dataTable/dataTableProducts/DataTableProducts";
@@ -54,6 +55,7 @@ function App() {
           <Route path="settings" element={<Blank />} />
           <Route path="stats" element={<Blank />} />
         </Route>
+        <Route path="/login" element={<Login/>}></Route>
       </Routes>
     </BrowserRouter>
   );
