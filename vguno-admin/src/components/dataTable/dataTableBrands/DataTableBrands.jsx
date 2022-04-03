@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import { useSelector,useDispatch } from 'react-redux';
+import {getBrands} from '../../../redux/callApi';
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
@@ -36,6 +38,13 @@ const columns = [
 
 
 const DataTableBrands = () => {
+  const dispatch = useDispatch();
+  const brands = useSelector(state => state.brands);
+  console.log(brands)
+
+  useEffect(()=> {
+    dispatch(getBrands);
+  },[dispatch])
     return (
         <div style={{ height: 400, width: '100%' }}>
            <DataGrid

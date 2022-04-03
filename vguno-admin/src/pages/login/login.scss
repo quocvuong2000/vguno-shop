@@ -2,36 +2,72 @@
 
 .login {
   @include flex();
-  background: linear-gradient(305.38deg, #a484fd 31.53%, #edcbfd 94.82%);
+  background: linear-gradient(318deg, #32486c 31.53%, #5e5e5e 92.82%);
   flex-direction: column;
   min-height: 100vh;
 
   &__title {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.4px;
     color: #fff;
+    margin-bottom: 30px;
   }
 
   &__detail {
     margin-top: 30px;
     @include flex(center, flex-start);
     flex-direction: column;
-    padding: 1rem 1rem 2rem 1rem;
-    border-radius: 30px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0.8rem 0.8rem 2rem 0.8rem;
+    border-radius: 35px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 45px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
-    background-color: #fff;
+    min-height: 400px;
+    min-width: 400px;
+    backdrop-filter: blur(4px);
+    position: relative;
+
     &__logo {
       @include flex();
-      width: 100px;
-      margin-bottom: 30px;
-      border-radius: 30px;
+      width: 100%;
+      background-color: #32486c;
+      margin-left: -0.8rem;
+      margin-right: -0.8rem;
+      margin-top: -0.8rem;
+      padding: 10px 0;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: relative;
       img {
-        width: 100%;
+        width: 100px;
         height: 100%;
         object-fit: cover;
+      }
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        top: 0;
+        left: -13px;
+        background-color: #243652;
+        border-top-left-radius: 35px;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        top: 0;
+        right: -13px;
+        background-color: #243652;
+        border-top-right-radius: 35px;
       }
     }
 
@@ -39,14 +75,25 @@
       &__item {
         margin-bottom: 20px;
         position: relative;
-
+        width: 100%;
         input {
-          padding: 10px;
-          border-radius: 10px;
+          padding: 10px 20px;
+          border-radius: 35px;
           outline: none;
           border: none;
-          background: #fcf7fe;
-          width: 250px;
+          background: rgba(255, 255, 255, 0.2);
+          width: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+          border-right: 1px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: #fff;
+        }
+        input::placeholder {
+          color: #fff;
         }
         i {
           cursor: pointer;
@@ -54,6 +101,7 @@
           right: 10px;
           top: 50%;
           transform: translateY(-50%);
+          color: #fff;
         }
       }
       &__btn {
@@ -73,7 +121,7 @@
         text-align: center;
         letter-spacing: 0.4px;
 
-        color: #fd409a;
+        color: #5040fd;
         cursor: pointer;
         button {
           width: 100%;
@@ -81,10 +129,64 @@
       }
     }
     &__forgot {
-        margin-top: 20px;
-        font-size: 14px;
-        color: rgb(85, 85, 255);
-        cursor: pointer;
+      margin-top: 20px;
+      font-size: 14px;
+      color: rgb(200, 200, 245);
+      cursor: pointer;
     }
+  }
+  .glass {
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 7px 3px rgb(120 221 234 / 5%);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    animation: move 10s linear infinite alternate;
+    animation-delay: calc(-1 * (10/5) * var(---i));
+  }
+  .glass:first-child {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -25px;
+  }
+  .glass:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 200px;
+    left: -50px;
+    z-index: 2;
+  }
+  .glass:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: 250px;
+    right: -50px;
+    z-index: 2;
+  }
+  .glass:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    top: -70px;
+    left: 50px;
+    z-index: 2;
+  }
+  .glass:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    top: 450px;
+    left: 100px;
+    z-index: -99;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
   }
 }
